@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "24335fec-9f80-4f86-9063-d8e179d215e8",
+		"name": "laden",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33041595"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/kunden/erstellen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"name\" : \"Daniel\",\r\n        \"nachname\" : \"Müller\",\r\n        \"ausweisnummer\" : \"345345345\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/kunden/erstellen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kunden",
+						"erstellen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/kunden/holen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/kunden/holen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kunden",
+						"holen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/kunden/loeschen/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/kunden/loeschen/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kunden",
+						"loeschen",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/kunden/bearbeiten",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"idKunde\" : 4,\r\n        \"name\" : \"Daniel\",\r\n        \"nachname\" : \"Krause\",\r\n        \"ausweisnummer\" : \"87687666\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/kunden/bearbeiten",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"kunden",
+						"bearbeiten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/produkten/erstellen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"bezeichnung\" : \"PS4\",\r\n        \"marke\" : \"Sony\",\r\n        \"preis\" : 800,\r\n        \"verfuegbareMenge\" : 2\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/produkten/erstellen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produkten",
+						"erstellen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/produkten/holen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/produkten/holen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produkten",
+						"holen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/produkten/loeschen/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/produkten/loeschen/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produkten",
+						"loeschen",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/produkten/bearbeiten",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"idProdukt\" : 4,\r\n        \"bezeichnung\" : \"Tastaur\",\r\n        \"marke\" : \"Asus\",\r\n        \"preis\" : 500,\r\n        \"verfuegbareMenge\" : 50\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/produkten/bearbeiten",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produkten",
+						"bearbeiten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/verkauft/erstellen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idVerkauf\" : 1,\r\n    \"verkaufsDatum\":\"2015-09-09\",\r\n    \"produkteListe\": [\r\n        {\r\n        \"idProdukt\": 1\r\n        },\r\n        {\r\n        \"idProdukt\": 2\r\n        }\r\n            ],\r\n        \"einKunde\" : {\r\n            \"idKunde\" : 2\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/verkauft/erstellen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verkauft",
+						"erstellen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/verkauft/holen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/verkauft/holen",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verkauft",
+						"holen"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/verkauft/loeschen/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/verkauft/loeschen/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verkauft",
+						"loeschen",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/verkauft/bearbeiten",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idVerkauf\" : 52,\r\n    \"verkaufsDatum\":\"2016-09-09\",\r\n    \"produkteListe\": [\r\n        {\r\n        \"idProdukt\": 1\r\n        },\r\n        {\r\n        \"idProdukt\": 2\r\n        }\r\n            ],\r\n        \"einKunde\" : {\r\n            \"idKunde\" : 2\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/verkauft/bearbeiten",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verkauft",
+						"bearbeiten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/produkten/produktemengekleinerals5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/produkten/produktemengekleinerals5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"produkten",
+						"produktemengekleinerals5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/verkauft/listeprodukte/52",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/verkauft/listeprodukte/52",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"verkauft",
+						"listeprodukte",
+						"52"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
